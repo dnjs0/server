@@ -1,0 +1,129 @@
+export > general > perference
+톰캣 확인
+밑 servers > tomcat9.0 > finish
+    port번호 때문에 오류가 나면 더블클릭 > 8080 을 8090으로 바꾸기
+생성 : new > new dynamic web project > web module에서 context root  : servlet ( 대소문자 구별, 주로 소문자로 작성), generate  web.xml 반드시 체크!
+
+
+
+
+
+
+웹 사이트 구축
+- Client 기술 + Server 기술 > 동적 웹사이트
+- Client 기술만 > 정적 웹사이트(전단지)
+
+클라이언트 측
+- HTML
+- CSS
+- JavaScript
+
+서버측
+- Servlet
+- JSP
+- Spring
+
+데이터베이스 연동
+- JDBC
+- MyBatis
+- Spring JDBC
+- JPA
+
+
+
+웹 페이지
+1. 정적 페이지 > 요청때마다 페이지 소스가 변함없는 페이지
+2. 동적 페이지 > 요청때마다 페이지 소스가 변화있는 페이지
+
+Servlet, 서블릿
+- 웹서버에서 자바를 사용한 프로그램을 동작시키는 기술
+- 프로그램 역할 > 웹 페이지 생성
+- 웹서버 측에서 동적으로 웹 페이지를 생성하는 기술
+
+Servlet Class
+- 서버측 개발자 역할
+- 카페의 바리스타(알바생) 역할
+- 클라이언트 요청(주문)에 따라 동적으로 웹 페이지를 생산하는 클래스
+
+Servlet Class 관리 환경(주체)
+- 기존 콘솔 자바 클래스 > 사람(개발자): 컴파일 + 실행
+- 서블릿 클래스 > 서블릿 컨테이너(실행 및 관리 환경) : 컴파일+ 실행 > 아파치 톰캣
+
+아파치 톰캣
+1. Apache : 웹서버
+2. Tomcat : 웹서버 + WAS(Web Application Server, 서버측 기술을 지원하는 환경) > 서블릿 컨테이너 or JSP 컨테이너
+    - Web Application == 웹 사이트 
+    - WAS는 뭐 쓰셨어요? > Tomcat
+    - 회사에 들어가면 '제우스'라는 WAS를 쓸수도 잇다 > 돈을 많이주면 OK, 적게주면 안가기 ㅋ
+    
+
+웹사이트
+- 받은 편지함
+    - 홍길동의 받은 편지함 : http://mail.naver.com/receive.jsp
+    - 아무개의 받은 편지함 : http://mail.naver.com/receive.jsp
+- 구매 이력
+- 내 정보 페이지 등등...
+
+
+
+
+
+
+
+
+
+Servlet Class 작성 규칙 > 알바생 자격
+
+1. 서블릿 클래스 선언 > 순수 자바 클래스(X), 서블릿 API 사용(O)
+    a. javax.servlet.Servlet 인터페이스를 구현한다. > 복잡함, 고비용
+    b. javax.servlet.http.HttpServlet 클래스를 상속한다. > 단순삼, 저비용
+    
+2. doGet/doPost 메서드 선언
+    - 둘 중 하나 선언 or 둘 다 선언
+    - 클라이언트(브라우저)의 요청이 들어오면, 자동으로 호출되는 메서드 > "주문"
+    - 톰캣이 실행(호출)한다. == 이벤트 같은 역할
+    - 커피 만드는 메서드 == HTML 페이지 만드는 메서드
+    - 메서드 작성 규칙
+        a. 매개 변수 작성
+            1. javax.servlet.http.Http.ServletRequset
+            2. javax.servlet.http.Http.ServletResponse
+        b. 예외 미루기
+            1. java.io.IOException
+            2. javax.servlet.ServletException
+            
+3. 동적 HTML 페이지 작성
+    - doGet/doPost 내부에서 요청받은 HTML 페이지를 작성하기 위한 자바코드를 작성한다.(개발자의 할일) > 미리 계획을 작성한다.
+    - ServletResponse 객체의 getWriter() 메서드 호출 > PrintWriter 객체 반환
+    - PrintWriter 객체 == 페이지를 제작하는 도구
+        - writer.printXXX("페이지 내용") > 동적으로 페이지를 생성한다고 한다.
+    - 페이지 완성 > 브라우저에게 반환
+    
+4. 서블릿 호출 +  가상 주소 매핑
+    - 순수 자바는 웹 기술이 아니다. > 웹에서는 자바 프로그램을 호출할 수 없다.
+    - 톰캣이 그 요청을 받아서 대신 자바프로그램을 호출한다.(Servlet Container)
+    - 자바 프로그램(서블릿 객체)을 호출하기 위한 가상 주소를 생성
+    - webapp > WEB-INF > web.xml(톰캣 환경설정 파일)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
