@@ -1,0 +1,58 @@
+export > general > perference
+톰캣 확인
+밑 servers > tomcat9.0 > finish
+    port번호 때문에 오류가 나면 더블클릭 > 8080 을 8090으로 바꾸기
+생성 : new > new dynamic web project > web module에서 context root  : servlet ( 대소문자 구별, 주로 소문자로 작성), generate  web.xml 반드시 체크!
+
+
+
+
+
+
+웹 사이트 구축
+- Client 기술 + Server 기술 > 동적 웹사이트
+- Client 기술만 > 정적 웹사이트(전단지)
+
+클라이언트 측
+- HTML
+- CSS
+- JavaScript
+
+서버측
+- Servlet
+- JSP
+- Spring
+
+데이터베이스 연동
+- JDBC
+- MyBatis
+- Spring JDBC
+- JPA
+
+
+
+웹 페이지
+1. 정적 페이지 > 요청때마다 페이지 소스가 변함없는 페이지
+2. 동적 페이지 > 요청때마다 페이지 소스가 변화있는 페이지
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
