@@ -8,3 +8,101 @@ JSP
 - 서블릿
 
 - webapp > "ex01.jsp"
+
+-perference > jsp > template > html5 수정
+-수정 내용 : 
+<%@ page language="java" contentType="text/html; charset=${encoding}" pageEncoding="${encoding}"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="${encoding}">
+    <title>Insert title here</title>
+</head>
+<body>
+    <!-- ${cursor} -->
+    ${cursor}
+    
+</body>
+</html>
+
+
+
+
+JSP 구성요소
+
+1. JSP 지시자, JSP Directive
+    - <%@ %>
+    a. page 지시자
+    b. include 지시자
+    c. taglib 지시자
+
+2. 스크립트 요소, Scripting Elements
+    - <% %>
+    a. 스크립틀릿
+    b. 익스프레션(표현식)
+    c. 선언부
+
+3. 액션 태그, Action Tags
+    - <jsp:XXX>, <c:XXX>
+    - 기본 액션 태그
+    - 확장 액션 태그
+    - 사용자 정의 액션 태그
+
+
+
+a. page 지시자
+- webapp > ex02.jsp
+- JSP 페이지 실행 환경 > 톰캣에게 알려준다.
+- JSP 페이지 첫줄에 작성
+- 1개 이상 작성 가능
+-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+    a. page 
+        - 키워드
+    b. language="java"
+        - JSP 페이지에서 사용할 프로그래밍 언어 저장
+    c. contentType="text/html; charset=UTF-8"
+        - JSP페이지의 콘텐츠에 대한 기술
+        - text/html : MIME 타입 > HTML 문서 > 브라우저에게 전달
+        - charset=UTF-8 : 인코딩 > HTML 문서 > 브라우저에게 전달
+    d. pageEncoding="UTF-8"
+        - 현재 JSP 페이지의 인코딩
+
+b. include 지시자
+- "ex03.jsp"
+- webapp > "inc" > copyright.jsp
+(inc : include 반복 될만한 코드는 따로 폴더를 만들어서 관리)
+
+
+
+
+
+
+
+
+
+a. 스크립틀릿
+- <% %>
+- Script + Applet
+- HTML 영역에서 Java 문법을 사용 가능하게 하는 영역을 제공
+- "ex04.jsp"
+
+b. 익스프레션(표현식)
+- <%= %>
+- 자바의 값을 HTML 문서에 출력하는 역할
+- System.out.print() 역할
+- 브라우저 화면에 출력하는 것이 아니다.(***) > HTML 문서에 출력!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
