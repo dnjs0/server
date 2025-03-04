@@ -29,6 +29,7 @@ public class Ex02 extends HttpServlet {
         
         //동적으로 생성된 HTML 파일 > 어디에 위치? > 톰캣이 관리
         //동적으로 생성된 HTML 파일 > 파일명 ? 
+        response.setCharacterEncoding("UTF-8");
         PrintWriter writer = response.getWriter();
         
         writer.write("<html>");

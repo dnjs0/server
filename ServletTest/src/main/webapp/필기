@@ -108,13 +108,23 @@ Servlet Class 작성 규칙 > 알바생 자격
 
 
 
+웹에서의 기본 행동
+- 데이터 보내기 + 받기
+- 폼(<form>) : 보내기 역할
+- 서블릿 : 받기 역할
+
+- com.test.java > "Ex03_Send.java"
+                > "Ex03_Receive.java"
 
 
 
 
 
+1. Servlet
+2. JSP
+3. Servlet + JSP
 
-
+JSPTest > content root : "jsp"
 
 
 
