@@ -145,20 +145,37 @@ response
 - 서블릿의 doGet/doPost의 두번째 매개변수와 동일
 - 주로 서버측에서 클라이언트측으로 발생하는 업무를 담당
 
+1. 돌려줄 HTML 페이지를 생성
+    - response.getWriter() > PrintWriter > HTML 제작
+    - 서블릿 > 구현 (O)
+    - JSP > 구현 (X) > 내부적으로 자동 구현(O)
+    
+2. 돌려줄 HTML 페이지 인코딩 설정
+    - response.setCharacterEncoding("UTF-8");
+    - 서블릿 > 구현 (O)
+    - JSP > 페이지 지시자에 기본적으로 들어가 있다. 이것임 : contentType="text/html; charset=UTF-8"
+    
+3. 돌려줄 HTML 페이지 MIME 설정
+    - contentType= "text/html;"
+    
+4. 페이지 이동하기
+    -"ex14_response_1.jsp"
+    -"ex14_response_2.jsp"
 
 
 
 
 서블릿/JSP 동작 방식
 - 요청 ~ 응답까지 벌어지는 일들..
-
-- src > com.test.java > "Test.java"
-
+- png그림보고 혼자 그리고 설명할 수 있을정도로 이해하기
 
 
 
 
 
+pageContext
+- ex15.pagecontext_1.jsp
+- ex15.pagecontext_2.jsp
 
 
 
