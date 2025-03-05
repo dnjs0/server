@@ -110,7 +110,7 @@ c. 선언부
 JSP 내장 객체, JSP Implicit Object
 - 개발자가 직접 생성하지 않아도, 톰캣이 미리 만들어서 제공하는 객체
 - 예약어(키워드)로 제공
-- request, response, session, pageContext
+- request, response, session(***), pageContext
 - out, application
 - config, page, exception 등
 
