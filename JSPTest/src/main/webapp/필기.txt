@@ -138,8 +138,10 @@ response
 
 
 
+서블릿/JSP 동작 방식
+- 요청 ~ 응답까지 벌어지는 일들..
 
-
+- src > com.test.java > "Test.java"
 
 
 

@@ -54,7 +54,7 @@
     /* String cb5 = request.getParameter("cb5"); //첫번째 항목만 반환
     System.out.println(cb5); */
     
-    //getParameterValues메서드 >  배열로 넘김
+    //여러값 넘어가면 getParameterValues메서드 >  배열로 넘김
     String[] cb5 = request.getParameterValues("cb5");
     
     
@@ -63,6 +63,24 @@
     String rb= request.getParameter("rb");
     
     
+    //셀렉트 박스
+    String sel1 = request.getParameter("sel1");
+    
+    //셀렉트 박스(다중선택)
+    String[] sel2 = request.getParameterValues("sel2");
+    
+    //히든 태그
+    String id = request.getParameter("id");
+    
+    //날짜
+    String date1 = request.getParameter("date1");
+    
+    //날짜
+    String color1 = request.getParameter("color1");
+  
+    //사용자 정의 컨트롤
+    String left = request.getParameter("left");
+    String top= request.getParameter("top");
     
 %>
 <!DOCTYPE html>
@@ -72,7 +90,8 @@
 	<title>Insert title here</title>
 	<link rel="stylesheet" href="http://bit.ly/3WJ5ilK">
 	<style>
-	
+	   body{padding-bottom:1000px}
+	   
 	</style>
 </head>
 <body>
@@ -100,9 +119,23 @@
     <h2>라디오 버튼</h2>
     <div><%= rb %></div>
     
+    <h2>셀렉트 박스</h2>
+    <div><%= sel1 %></div>
     
+    <h2>셀렉트 박스(다중선택)</h2>
+    <div><%= Arrays.toString(sel2) %></div>
     
+    <h2>히든 태그</h2>
+    <div><%= id %></div>
     
+    <h2>날짜</h2>
+    <div><%= date1 %></div>
+    
+    <h2>색상</h2>
+    <div><%= color1 %></div>
+    
+    <h2>사용자 정의 컨틑롤</h2>
+    <div><%= left %>,<%=top %></div>
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script src="https://bit.ly/4cMuheh"></script>

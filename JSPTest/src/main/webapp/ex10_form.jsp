@@ -6,7 +6,7 @@
 	<title>Insert title here</title>
 	<link rel="stylesheet" href="http://bit.ly/3WJ5ilK">
 	<style>
-	   body{margin-bottom : 1000px}
+	   body{padding-bottom : 1000px}
 	</style>
 </head>
 <body>
@@ -51,24 +51,80 @@
             </td>
         </tr>
         <tr>
-            <th>셀렉트 박스</th>
+            <th>라디오 박스</th>
             <td>
                 <h4>성별을 선택하세요.</h4>
                 <label><input type = "radio" name="rb" value = "male" checked>남자</label>
                 <label><input type = "radio" name="rb" value = "female">여자</label>
             </td>
         </tr>
+        <tr>
+            <th>셀렉트 박스</th>
+            <td>
+                <select name="sel1">
+                    <option value="1">사과</option>
+                    <option value="2">바나나</option>
+                    <option value="3">귤</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>셀렉트 박스(다중선택)</th>
+            <td>
+                <!-- sel2=1&sel2=2&sel2=3 -->
+                <select name="sel2" multiple>
+                    <option value="1">사과</option>
+                    <option value="2">바나나</option>
+                    <option value="3">귤</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>히든 태그</th>
+            <td><input type="hidden" name="id" value="hong"></td>
+        </tr>
+        <tr>
+            <th>날짜</th>
+            <td>
+                <input type="date" name="date1">
+            </td>
+        </tr>
+        <tr>
+            <th>색상</th>
+            <td>
+                <input type="color" name="color1" style="height:35px" onchange = "//alert(this.value);">
+            </td>
+        </tr>
+        <tr>
+            <th>사용자 정의 컨트롤</th>
+            <td>
+                <img src="images/catty01.png" id="cat1">
+            </td>
+        </tr>
     </table>
     <div>
         <button>보내기</button> 
     </div>
+    
+    <!-- 이미지의 좌표값 보내기 -->
+    <!-- 히든태그는 눈에 안보이니 개발자도구>요소 로 확인하기 -->
+    <input type="hidden" name="left">
+    <input type="hidden" name="top">
     </form>
 	
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 	<script src="https://bit.ly/4cMuheh"></script>
 	<script>
-	
+	   $('#cat1').draggable({
+		   stop : function(event, ui){
+			   //alert(ui.position.left);
+			   //alert(ui.position.top);
+			   $('input[name=left]').val(ui.position.left);
+			   $('input[name=top]').val(ui.position.top);
+		   }
+	   });
 	</script>
 </body>
 </html>
