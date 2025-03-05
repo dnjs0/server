@@ -18,19 +18,30 @@
             - ex09_ok.jsp?txt=홍길동&num=100
             - 쿼리스트링(QueryString)*****
             - 톰캣을 사용해서 데이터 전송 > 기본 인코딩 UTF-8
+            - 데이터 노출
+            - URL 길이 제한
+            - 간단한 데이터 전송 > 아이디 or 숫자 or 키워드
             
         2. POST
             - 패킷 본문 안에 넣어서 전송
             - 표준 방식
             - ex09_ok.jsp
             - 자바를 사용해서 데이터 전송 > ISO-8859-1
+            - 데이터 은닉
+            - 길이 제한 없음
         
     */
+    //수신할 데이터의 인코딩 처리
+    //ISO-8859-1 > UTF-8
+    //- 반드시 getParameter 사용 전에
+    request.setCharacterEncoding("UTF-8");
+    
+    
     //데이터 수신하기
     //String request.getParameter(String key);
     String txt = request.getParameter("txt");
     String num = request.getParameter("num");
-    
+    String txt2 = request.getParameter("txt2");
     
 
 %>
@@ -45,9 +56,14 @@
 </head>
 <body>
     <!--ex09_ok.jsp  -->
+    
+    
+    
+    
     <h1>결과</h1>
     <div>문자 : <%=txt %></div>
     <div>숫자 : <%=num %></div>
+    <div>txt2: <%= txt2.length() %></div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://bit.ly/4cMuheh"></script>

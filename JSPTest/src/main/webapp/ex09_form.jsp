@@ -26,17 +26,47 @@
 	
 	
 	<h2>폼태그 + GET 방식으로 보내기</h2>
-	<!-- GET : 한글 넣어고 안깨짐 -->
+	<!-- GET : 한글 넣어도 안깨짐 -->
     <form method="GET" action="ex09_ok.jsp">
        <div>문자 : <input type = "text" name="txt"></div>
        <div>숫자 : <input type = "number" name="num"></div>
        <div><input type="submit" value="보내기"></div>
     </form>
 	
+	
+	<h2>폼 태그 없이 데이터 전송하기(무조건 GET방식 이용)</h2>
+	<div>
+	   <a href="ex09_ok.jsp?txt=hong&num=123">페이지 이동하기</a>
+	</div>
+	
+	
+	
+	<div>
+	   <input type="button" value="클릭" id="btn1">
+	</div>
+	
+	
+	
+	<h2>GET 대량의 데이터</h2>
+	
+	<div>
+    <form method="GET" action="ex09_ok.jsp">
+        <textarea name="txt2" class="full"></textarea>
+        <button>보내기</button>
+    </form>
+    </div>
+    
+	
+	
+	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script src="https://bit.ly/4cMuheh"></script>
 	<script>
-	
+	   $('#btn1').click(()=>{
+		   location.bref = `ex09_ok.jsp?txt=\${document.getElementById('btn1').value}&num=456`;
+	   });
+
+
 	</script>
 </body>
 </html>
