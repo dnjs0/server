@@ -25,10 +25,12 @@
 	<h1>결과</h1>
 	
 	<div>
-	<%for(int i=0; i<count; i++){  %>
-	<div style="border:1px solid black; width:<%=width%>px; height:<%=height%>px; background-color:<%=color%>; display:flex; justify-content:center; align-items:center;"><%=txt %></div>
-	<%} %>
-	</div>
+        <% for (int i=0; i<count; i++) { %>
+        <div style="border: 1px solid black; width: <%= width %>px; height: <%= height %>px; background-color: <%= color %>; display: flex; justify-content: center; align-items: center; margin: 5px; float: left;">
+            <%= txt %>
+        </div>
+        <% } %>
+    </div>
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script src="https://bit.ly/4cMuheh"></script>

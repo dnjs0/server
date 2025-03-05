@@ -120,6 +120,9 @@ JSP 내장 객체, JSP Implicit Object
     - Object getAttribute(String key)
 
 
+
+
+
 request
 - HttpServletRequest
 - 서블릿의 doGet/doPost의 첫번째 매개변수와 동일
@@ -128,11 +131,19 @@ request
     - ex09_form.jsp //send
     - ex09_ok.jsp   //receive
 
+2. 클라이언트에서 서버로 전송한 데이터의 인코딩 처리
+
+3. 클라이언트에서 서버로 요청 시 정보를 가져오기 
+
+
+
+
+
 
 response
 - HttpServletResponse
 - 서블릿의 doGet/doPost의 두번째 매개변수와 동일
-
+- 주로 서버측에서 클라이언트측으로 발생하는 업무를 담당
 
 
 
