@@ -178,8 +178,22 @@ pageContext
 - ex15.pagecontext_2.jsp
 
 
+out
+- 출력 객체
+- JSP 방식이 아닌 Servlet 방식의 출력을 지원하는 객체
+- 서블릿의PrintWriter 역할(이지만 out객체가 기능이 더 많음)
+- ex16_out.jsp
 
 
+session, application
+- 세션 : 클라이언트(브라우저 사용자)가 서버에 접속해서 나갈때까지의 간격
+- 객체 입장으로서의 역할
+
+- ex18_session.jsp
+- ex18_set.jsp
+- ex18_del.jsp
+- ex18_interval.jsp
+- ex18_reset.jsp
 
 
 
