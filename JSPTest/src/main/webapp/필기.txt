@@ -226,6 +226,10 @@ session, application
 - ex21_del.jsp // 삭데 처리 페이지(지우기)
 
 
+-풀어보기..
+ex22.jsp
+ex22_ok.jsp
+ex22_del.jsp
 
 
 

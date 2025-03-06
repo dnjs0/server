@@ -76,9 +76,10 @@
 	
 	<div id="list">
 	<%for(File file : list){ %>
-	   <div data-modal-button="view" data-filename="<%= file.getName()%>" onclick()="show();">
+	   <div data-modal-button="view" data-filename="<%= file.getName()%>">
 		   <img src="pic/<%= file.getName()%>">
-		   <span class="delete">&times;</span>
+		   <span class="delete"
+		     onclick = "del('<%=file.getName()%>')">&times;</span>
 	   </div>
 	<%} %>
 	</div>
@@ -119,6 +120,17 @@
 			   $('#img1').attr('src','pic/'+event.currentTarget.dataset['filename']);
 		   });
 	   });
+	   
+	   function del(filename){
+		   //alert(filename);
+		   
+		   if(confirm('delete?')){
+			   location.href = 'ex21_del.jsp?filename='+filename;
+			   
+		   }
+			   event.stopPropagation();
+			   return false;
+	   }
 	</script>
 </body>
 </html>
