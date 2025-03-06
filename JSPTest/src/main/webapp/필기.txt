@@ -196,6 +196,57 @@ session, application
 - ex18_reset.jsp
 
 
+내장 객체의 생명 주기(**********)
+매우 중요 반드시 외우기
+- pageContext, request, session, application
+-내부 컬렛견 사용 가능 객체
+
+- pageContext : 생성(페이지 요청) ~ 소멸(페이지 반환)
+- request: 생성(페이지 요청) ~ 소멸(페이지 반환)
+            생성(처음 페이지 요청) ~ 페이지 이동(forward) ~ 소멸(다음 페이지 반환)
+- session : 생성(처음 방문 시) ~ 소멸(최종 접속 후 30분 미접속)
+- application : 생성(첫번째 사용자 접속) ~ 소멸(마지막 사용자 세션 소멸)
+
+
+
+
+
+파일 업로드 / 다운로드
+
+단일 파일 업로드
+- ex19_form.jsp
+- ex19_ok.jsp
+다중 파일 업로드
+- ex20_form.jsp
+- ex20_ok.jsp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

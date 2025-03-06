@@ -6,11 +6,23 @@
 	<title>Insert title here</title>
 	<link rel="stylesheet" href="http://bit.ly/3WJ5ilK">
 	<style>
-	
+	div > a{display:block; margin-bottom:5px;}
 	</style>
 </head>
 <body>
-	<!--  -->
+	<!-- ex18_interval.jsp -->
+    <h1>세션 만료 시간 지정하기</h1>
+    <%
+        /* 
+            1. 로그인
+            
+            2. 장바구니
+            
+            
+        */
+       session.setMaxInactiveInterval(30); //30초
+    %>
+    <a href="ex18_session.jsp">돌아가기</a>
 	
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
