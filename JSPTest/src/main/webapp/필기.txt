@@ -220,7 +220,10 @@ session, application
 - ex20_form.jsp
 - ex20_ok.jsp
 
-
+갤러리(이미지 뷰어)
+- ex21.jsp //메인 페이지(읽기)
+- ex21_ok.jsp //업로드 처리 페이지(쓰기)
+- ex21_del.jsp // 삭데 처리 페이지(지우기)
 
 
 
