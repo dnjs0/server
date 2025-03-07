@@ -244,6 +244,25 @@ ex22_del.jsp
 
 
 
+EL + JSTL
+- 더 이상 JSP 문법에서 자바 문법을 사용하지 말자!! > 가독성을 위해
+
+
+EL, Expression Language
+- ex23_el.jsp
+
+JSTL, Java Standard Tag Library
+- ex24_jstl.jsp
+
+
+
+
+
+
+
+
+
+
 
 
 
