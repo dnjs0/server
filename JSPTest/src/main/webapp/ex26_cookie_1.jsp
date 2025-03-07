@@ -42,9 +42,13 @@
 		   $('body').css('background-color',$('#color').val());
 		   setCookie('color',$('#color').val());
 	   });
+	   
 	    $('#btnClear').click(()=>{
            
        });
+	    
+	    $('body').css('background-color', getCookie('color'));
+	    $('#color').val(getCookie('color'));
 	</script>
 </body>
 </html>

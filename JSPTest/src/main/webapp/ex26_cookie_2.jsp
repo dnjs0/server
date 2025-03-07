@@ -23,7 +23,7 @@
 	<script src="https://bit.ly/4cMuheh"></script>
 	<script src="js/cookie.js"></script>
 	<script>
-	
+	   $('body').css('background-color', getCookie('color'));
 	</script>
 </body>
 </html>
