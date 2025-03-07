@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,6 +9,7 @@
 	<link rel="stylesheet" href="http://bit.ly/3WJ5ilK">
 	<style>
 	   body { padding-bottom : 1000px}
+	   
 	</style>
 </head>
 <body>
@@ -114,9 +116,96 @@
     
     <br>
     
-    <c:forEach var="i" begin="1" end="9" step="1">
+    <!-- step은 양수만 가능 -->
+    <c:forEach var="i" begin="1" end="9" step="3">
         <div>숫자 : ${i}</div>
     </c:forEach>
+    
+    <br>
+	
+	<%
+	   String[] names ={"홍길동","아무개","강아지","고양이","병아리"};
+	   pageContext.setAttribute("names",names);
+	%>
+	
+	<br>
+	
+	<!-- for(String name : names) -->
+	<c:forEach var="name" items="${names}">
+	   <div>${name}</div>
+	</c:forEach>
+	<br>
+	<table>
+	   <tr>
+	       <th>이름</th>
+	       <th>인덱스</th>
+	       <th>카운트</th>
+	       <th>current</th>
+	       <th>first</th>
+	       <th>last</th>
+	   </tr>
+	   <c:forEach items="${names}" var="name" varStatus="status">
+	   
+	   <c:if test="${status.index mod 2 == 0}">
+	   <tr style="background-color:gold; text-align:center;">
+	   </c:if>
+	   
+	   <c:if test="${status.index mod 2 == 1}">
+       <tr style="text-align:center;">
+       </c:if>
+	   
+	   
+	       <td>${name}</td>
+	       <td style="text-align:right">${status.index} - ${j}</td>
+	       <td style="text-align:right">${status.count}</td>
+	       <td>${status.current}</td>
+	       <td>${status.first}</td>
+	       <td>${status.last}</td>
+	   </tr>
+	   <c:set var="j" value="${j+1}" />
+	   </c:forEach>
+	</table>
+	
+	<hr>
+	
+	<c:forTokens var="city" items="서울,인천,대구,부산,제주" delims=",">
+	   <div>${city}</div>
+	</c:forTokens>
+	
+	
+	
+	<h2>출력문</h2>
+	<c:set var="txt" value="안녕하세요. <b>홍길동<b>입니다."/>
+	<div>txt : ${txt}</div>
+	<div style="padding: .3rem 1rem;">txt : <c:out value="${txt}"/></div>
+	<!-- out : <, >, b 모두 escape시킴 -->
+	<div style="padding: .3rem 1rem;">txt : <c:out value="${txt}" escapeXml="false" /></div>
+	
+	
+	<hr>
+	
+	<div>http://localhost:8090/jsp/ex20.jsp?name=hong&age=20&gender=m</div>
+	
+	<c:url var="url1" value="http://localhost:8090/jsp/ex20.jsp" >
+	   <c:param name="name" value="hong"></c:param>
+	   <c:param name="age" value="20"></c:param>
+	   <c:param name="gender" value="m"></c:param>
+	</c:url>
+	<div><a href="${url1}">페이지 이동하기</a></div>
+	
+	<hr>
+	
+	<!-- 바로가기 -->
+	<%-- <c:redirect url="ex21.jsp"></c:redirect> --%>
+	
+	
+	
+	<c:set var="price" value="1234567" />
+	<div>가격 : ${price}원</div>
+	<!-- 세자리 마다 , 찍기 -->
+	<div>가격 : <fmt:formatNumber value="${price }"/>원</div>
+	
+	
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script src="https://bit.ly/4cMuheh"></script>
