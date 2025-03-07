@@ -38,17 +38,25 @@
 	<script src="https://bit.ly/4cMuheh"></script>
 	<script src="js/cookie.js"></script>
 	<script>
+	   if(getCookie('color')!= ''){
+		    $('body').css('background-color', getCookie('color'));
+		    $('#color').val(getCookie('color'));
+	   }
+	
 	   $('#btnApply').click(()=>{
 		   $('body').css('background-color',$('#color').val());
-		   setCookie('color',$('#color').val());
+		   setCookie('color',$('#color').val(),10);
 	   });
 	   
 	    $('#btnClear').click(()=>{
-           
+	    	$('body').css('background-color', '#FFFFFF');
+	    	$('#color').val('#FFFFFF');
+	    	
+	    	//쿠키 삭제 > 기능 없음 > 유통기한을 어제로 두기
+	    	setCookie('color','',-1);
+	    	
        });
 	    
-	    $('body').css('background-color', getCookie('color'));
-	    $('#color').val(getCookie('color'));
 	</script>
 </body>
 </html>
