@@ -50,6 +50,19 @@
 	<script src="https://bit.ly/4cMuheh"></script>
 	<script src="js/cookie.js"></script>
 	<script>
+	   //처음 방문
+	   $('input[name=id]').focus();
+	   
+	   if(getCookie('id') != ''){
+		   //저장된 아이디 존재O
+		   $('input[name=id]').val(getCookie('id'));
+		   $('input[name=pw]').focus();
+		   $('#cbRemember').prop('checked', true);
+	   }else{
+		   //저장된 아이디 존재X
+	   }
+	   
+	
 	
 	</script>
 </body>
