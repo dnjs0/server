@@ -28,15 +28,33 @@ update tblAddress set address = '서울시 강동구 천호동' where seq =1;
 
 commit;
 
+--hr 로 연결
+show user;
+select * from tabs;
+
+select * from tblInsa;
+select name from tblInsa where buseo='기획부';
+
+select * from tblBonus;
+
+create table tblBonus(
+    seq number primary key,
+    num number(5) not null references tblInsa(num), --직원 번호
+    bonus number not null
+);
+drop sequence seqBonus;
+create sequence seqBonus;
+
+select i.num, i.name, i.buseo, i.jikwi, t.bonus
+from tblInsa i
+inner join tblBonus t on t.num=i.num;
+
+
+select count(*) as cnt from tblInsa where buseo='영업부';
 
 
 
-
-
-
-
-
-
+select * from tblInsa where buseo = '영업부';
 
 
 
