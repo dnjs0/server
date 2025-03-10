@@ -14,6 +14,10 @@ public class DBUtil {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             conn = DriverManager.getConnection(url, id, pw);
+            //SQL을 실행하기 전에!!
+            //true가 기본값
+            //false -> 수종으로 트래잭션을 제어하겠다~
+            conn.setAutoCommit(false);
             
             return conn;
             

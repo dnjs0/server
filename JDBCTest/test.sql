@@ -9,6 +9,7 @@ create table tblAddress(
     regdate date default sysdate not null                   --날짜
 );
 
+drop table tblAddress;
 create sequence seqAddress;
 drop sequence seqAddress;
 
@@ -17,7 +18,8 @@ insert into tblAddress(seq, name, age, gender, tel, address, regdate)
     values(seqAddress.nextVal, '홍길동',20,'m','010-1234-5678','서울시 강남구 역삼동',default);
 
 --CRUD
-select * from tblAddress;
+select * from tblAddress 
+    order by regdate;
 delete tblAddress where seq=1;
 
 update tblAddress set age = age+1 where seq = 1;
