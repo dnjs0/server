@@ -12,7 +12,7 @@
 show user; --USER이(가) "SYSTEM"입니다.
 
 
- alter session set "_ORACLE_SCRIPT"=true;
+alter session set "_ORACLE_SCRIPT"=true;
 create user server identified by java1234;
 grant connect, resource, dba to server;
 alter user server default tablespace users;
