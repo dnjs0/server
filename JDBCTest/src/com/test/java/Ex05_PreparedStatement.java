@@ -11,6 +11,11 @@ public class Ex05_PreparedStatement {
         //PreparedStatement
         //- 매개변수 지원
         
+        //Statement vs PreparedStatement
+        //1. Statement > 정적 SQL
+        //2. PreparedStatement > 동적 SQL + 텍스트 SQL
+        //3. CallableStatement > 프로시저 전용
+        
         //insert
         String name = "하마";
         String age = "30";
