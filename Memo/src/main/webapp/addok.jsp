@@ -34,6 +34,13 @@
     stat.close();
     conn.close();
     
+    if(result==1){
+        response.sendRedirect("/memo/list.jsp");
+    }else{
+        out.println("<script>alert('failed'); history.back();</script>");
+        out.close();//이거 해야 나머지 및에 코드 실행 안함
+    }
+    
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -70,8 +77,19 @@
 	    </div>
 	<%} %>
     
+    
+    
+    
     <script>
-        
+    <% if(result ==1){ %>
+	    alert('메모작성을 완료했습니다.');
+	    location.href ='/memo/list.jsp';
+	<%} %>
+	<% if(result ==0){ %>
+		alert('메모작성을 실패했습니다.');
+		history.back();
+	<%} %>
+	    
     </script>
 </body>
 </html>

@@ -1,22 +1,42 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    
+
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<title>Insert title here</title>
-	<link rel="stylesheet" href="http://bit.ly/3WJ5ilK">
-	<style>
-	
-	</style>
+    <meta charset="UTF-8">
+    <title>Memo</title>
+    <%@ include file = "/inc/asset.jsp" %>
+    <style>
+    
+    </style>
 </head>
 <body>
-	<!--  -->
-	
-	
-	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-	<script src="https://bit.ly/4cMuheh"></script>
-	<script>
-	
-	</script>
+    <!-- list.jsp -->
+    <%@ include file="/inc/header.jsp" %>
+    
+    <h1>Memo <small>목록보기</small></h1>
+    
+    <div id="list">
+       <div class="item">
+            <div>메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.메모입니다.</div>
+            <div>
+                <span>홍길동</span> / <span>2025-03-11 12:33:00</span>
+            </div>
+            <div>
+                <button type="button" class="edit" onclick="">수정하기</button>
+                <button type="button" class="del" onclick="">삭제하기</button>
+            </div>
+       </div>
+       
+    </div>
+    
+    
+    <script>
+    
+    </script>
 </body>
 </html>
