@@ -1,22 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    
+
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<title>Insert title here</title>
-	<link rel="stylesheet" href="http://bit.ly/3WJ5ilK">
-	<style>
-	
-	</style>
+    <meta charset="UTF-8">
+    <title>Memo</title>
+    <%@ include file = "/inc/asset.jsp" %>
+    <style>
+    
+    </style>
 </head>
 <body>
-	<!--  -->
-	
-	
-	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-	<script src="https://bit.ly/4cMuheh"></script>
-	<script>
-	
-	</script>
+    <!-- add.jsp -->
+    <%@ include file="/inc/header.jsp" %>
+    
+    <h1>Memo <small>쓰기</small></h1>
+    
+    <form action="/memo/addok.jsp" method="POST">
+        <table class = "vertical">
+            <tr>
+                <th>이름</th>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <th>암호</th>
+                <td><input type="password" name="pw" required></td>
+            </tr>
+            <tr>
+                <th>메모</th>
+                <td><textarea name="memo" class="full" required></textarea></td>
+            </tr>
+        </table>
+        <div>
+            <button type="submit" class="add">쓰기</button>
+            <button type="button" class="back" onclick="location.href='/memo/list.jsp';">돌아가기</button>
+        </div>
+    
+    </form>
+
+    
+    
+    <script>
+    
+    </script>
 </body>
 </html>

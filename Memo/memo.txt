@@ -32,7 +32,7 @@ drawio
 - 리소스 : webapp > asset > css > main.css
                           > js > main.js
                           > images (지금은 안만듦)
-
+ - JDBC : "com.test.java" > DBUtil.java
 
 
 

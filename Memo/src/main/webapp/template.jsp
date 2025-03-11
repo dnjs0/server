@@ -9,17 +9,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Memo</title>
-	<link rel="stylesheet" href="http://bit.ly/3WJ5ilK">
+	<%@ include file = "/inc/asset.jsp" %>
 	<style>
 	
 	</style>
 </head>
 <body>
 	<!-- template.jsp -->
+	<%@ include file="/inc/header.jsp" %>
+	
+	<h1>Memo <small></small></h1>
+	
+	<div>
+	   업무내용
+	</div>
 	
 	
-	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-	<script src="https://bit.ly/4cMuheh"></script>
 	<script>
 	
 	</script>
