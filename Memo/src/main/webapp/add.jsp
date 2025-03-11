@@ -8,7 +8,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Memo</title>
+    <title>Memo </title>
     <%@ include file = "/inc/asset.jsp" %>
     <style>
     
