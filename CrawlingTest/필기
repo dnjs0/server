@@ -27,6 +27,6 @@
 - HTML, CSS, JavaScript 이해
 - Java > 관련 API
 
-패키지 : com.test.java > Ex01.java
+3. 패키지 : com.test.java > Ex01.java,Ex02.java
 
-
+-webapp > "ex03.jsp"
