@@ -12,4 +12,7 @@ insert into tblUser values('hong','1111','홍길동',1);
 insert into tblUser values('dog','1111','강아지',1);
 insert into tblUser values('cat','1111','고양이',2);
 
+
+
 select * from tblUser;
+delete from tblUser;
