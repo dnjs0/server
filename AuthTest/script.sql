@@ -16,3 +16,5 @@ insert into tblUser values('cat','1111','고양이',2);
 
 select * from tblUser;
 delete from tblUser;
+
+commit;
