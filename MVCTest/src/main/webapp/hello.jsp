@@ -10,8 +10,12 @@
 	</style>
 </head>
 <body>
-	<!--  -->
+	<!-- hello.jsp -->
+	<h1>Hello</h1>
 	
+	<div>안녕하세요.</div>
+	<%-- <div><%=request.getAttribute("name") %>님 안녕하세요</div> --%>
+	<div>${name}님 안녕하세요</div>
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script src="https://bit.ly/4cMuheh"></script>
