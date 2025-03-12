@@ -1,6 +1,10 @@
 
 JSP Model 2 + JDBC
-
+- MVC 디자인 패턴 사용
+- Model + View + Controller
+    - Controller : 전체적인 흐름을 제어하는 역할
+    - Model : 데이터 처리 역할
+    - View : 출력 역할
 
 
 

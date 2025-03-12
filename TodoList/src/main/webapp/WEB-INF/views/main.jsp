@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -17,12 +18,15 @@
 <body class="narrow">
 	<!-- main.jsp -->
 	<h1 class="main" >Todo List</h1>
+	<%-- ${list} --%>
 	
 	<table id="tbl1">
+	   <c:forEach items="${list}" var="item">
 	   <tr>
 	       <td><input type="checkbox"></td>
-	       <td>컴퓨터 포맷하기 <span>2025-03-12 16:20:30</span></td>
+	       <td>${item.todo} <span>${item.regdate}</span></td>
 	   </tr>
+	   </c:forEach>
 	</table>
 	
 	<hr>
