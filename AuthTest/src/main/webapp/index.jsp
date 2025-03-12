@@ -10,12 +10,20 @@
 	</style>
 </head>
 <body>
-	<!--  -->
+	<!-- index.jsp -->
+	<h1>시작 페이지</h1>
 	
+	<div>
+	   <input type = "button" value="로그인"
+	       onclick= "location.href='/auth/auth/login.jsp';">
+	   <input type = "button" value="로그아웃"
+           onclick= "location.href='/auth/auth/logout.jsp';">
+	</div>
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script src="https://bit.ly/4cMuheh"></script>
 	<script>
+	
 	
 	</script>
 </body>

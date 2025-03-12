@@ -10,7 +10,25 @@
 	</style>
 </head>
 <body>
-	<!--  -->
+	<!-- auth > login.jsp -->
+	<h1>로그인</h1>
+	
+	<form method = "post" action="/auth/auth/loginok.jsp">
+	   <table class = "vertical content">
+	       <tr>
+	           <th>아이디</th>
+	           <td><input type="text" name="id" required class="short"></td>
+	       </tr>
+	       <tr>
+               <th>암호</th>
+               <td><input type="text" name="pw" required class="short"></td>
+           </tr>
+	   </table>
+	   <div>
+	       <input type="submit" value="로그인">
+	   </div>
+	</form>
+	
 	
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>

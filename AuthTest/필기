@@ -29,7 +29,9 @@
          > admin > admin.jsp        //관리자 전용 페이지 > 허가
 
 
-
+**DBUtil jar파일 만들기
+새프로젝트 -JavaProject >MyUtil > finish
+-src >  com.test.util > DBUtil.java
 
 
 

@@ -11,7 +11,11 @@
 </head>
 <body>
 	<!--  -->
+	<h1>시작 페이지</h1>
 	
+	<div>
+	
+	</div>
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script src="https://bit.ly/4cMuheh"></script>
