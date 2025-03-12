@@ -1,0 +1,8 @@
+
+인증, Authentication & 허가, Authorization
+- 로그인/로그아웃
+- 사인인/사인아웃
+
+
+1. 새프로젝트
+- New > Dynamic Web Project > "AuthTest" > Context Root("auth"), web.xml 체크(O)
