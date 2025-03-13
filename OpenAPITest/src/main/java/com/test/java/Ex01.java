@@ -15,14 +15,18 @@ import java.util.Map;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class Ex01 {
-    public static void main(String[] args) {
-        String clientId = "7aTYocXbgCmv24Skitjw"; //애플리케이션 클라이언트 아이디
-        String clientSecret = "vkVPAJJHh7"; //애플리케이션 클라이언트 시크릿
+
+	public static void main(String[] args) {
+		
+        String clientId = "Dq9kLO_8VwS8mKwWMOC8";
+        String clientSecret = "QximffsdfK";
 
 
         String text = null;
+        
         try {
             text = URLEncoder.encode("자바", "UTF-8");
         } catch (UnsupportedEncodingException e) {
@@ -30,8 +34,8 @@ public class Ex01 {
         }
 
 
-        String apiURL = "https://openapi.naver.com/v1/search/book?query=" + text;    // JSON 결과
-        //String apiURL = "https://openapi.naver.com/v1/search/book.xml?query="+ text; // XML 결과
+        String apiURL = "https://openapi.naver.com/v1/search/book.json?query=" + text; 
+        //String apiURL = "https://openapi.naver.com/v1/search/book.xml?query="+ text;
 
 
         Map<String, String> requestHeaders = new HashMap<>();
@@ -39,102 +43,96 @@ public class Ex01 {
         requestHeaders.put("X-Naver-Client-Secret", clientSecret);
         String responseBody = get(apiURL,requestHeaders);
 
-        //결과 출력
+
+        //결과 출력(XML, JSON)
         //System.out.println(responseBody);
         
-        //HTML Parsor 설치 > Jsoup
+        //HTML Parser 설치 > Jsoup
         //JSON Parser 설치 > json-simple
-        String body = """
-                {
-                    "name" : "홍길동",
-                    "age" : 20,
-                    "address" : {
-                        "sido":"서울시",
-                        "gugun" : "강남구"
-                    }
-                }
-                """;
         
+        String body = """
+        		
+        		{
+        			"name": "홍길동",
+        			"age": 20,
+        			"address": {
+        				"sido": "서울시",
+        				"gugun": "강남구"
+        			}
+        		}
+        		
+        		""";
         
         String body2 = """
-                [
-                {
-                    "name" : "홍길동",
-                    "age" : 20,
-                    "address" : {
-                        "sido":"서울시",
-                        "gugun" : "강남구"
-                    }
-                },
-                {
-                    "name" : "아무개",
-                    "age" : 25,
-                    "address" : {
-                        "sido":"서울시",
-                        "gugun" : "강동구"
-                    }
-                }
-                ]
-                """;
-        
-        
+        		[
+	        		{
+	        			"name": "홍길동",
+	        			"age": 20,
+	        			"address": {
+	        				"sido": "서울시",
+	        				"gugun": "강남구"
+	        			}
+	        		},	        		
+	        		{
+	        			"name": "아무개",
+	        			"age": 25,
+	        			"address": {
+	        				"sido": "서울시",
+	        				"gugun": "강동구"
+	        			}
+	        		}
+        		]
+        		
+        		""";
         
         JSONParser parser = new JSONParser();
+        
         try {
-            /*
-             * JSONObject obj = (JSONObject)parser.parse(body);
-             * System.out.println(obj.get("name")); System.out.println(obj.get("age"));
-             * System.out.println(obj.get("address"));
-             * 
-             * JSONObject address = (JSONObject)obj.get("address");
-             * System.out.println(address.get("sido"));
-             * System.out.println(address.get("gugun"));
-             */
-            
-            
-            
-            /*
-             * JSONArray list = (JSONArray)parser.parse(body2);
-             * System.out.println(list.size());
-             * 
-             * for(Object obj : list) { System.out.println(((JSONObject)obj).get("name"));
-             * System.out.println(((JSONObject)obj).get("age")); }
-             */
-            
-            
-            
-
-            
-            
-            JSONObject root = (JSONObject)parser.parse(responseBody);
-            System.out.println(root.get("total")+"권");
-            
-            JSONArray list = (JSONArray)root.get("items");
-            System.out.println(list.size());
-            
-            for(Object obj  : list) {
-                JSONObject book = ((JSONObject)obj);
-                
-                System.out.println(book.get("title"));
-                System.out.println(book.get("discount"));
-                System.out.println(book.get("author"));
-                System.out.println();
-                
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        	
+//        	JSONObject obj = (JSONObject)parser.parse(body);
+//        	System.out.println(obj.get("name"));
+//        	System.out.println(obj.get("age"));
+//        	System.out.println(obj.get("address"));
+//        	
+//        	JSONObject address = (JSONObject)obj.get("address");
+//        	System.out.println(address.get("sido"));
+//        	System.out.println(address.get("gugun"));
+        	
+        	
+//        	JSONArray list = (JSONArray)parser.parse(body2);
+//        	
+//        	System.out.println(list.size());
+//        	
+//        	for (Object obj : list) {
+//        		
+//        		System.out.println(((JSONObject)obj).get("name"));
+//        		System.out.println(((JSONObject)obj).get("age"));
+//        		
+//        	}
+        	
+        	
+			JSONObject root = (JSONObject)parser.parse(responseBody);
+			
+			System.out.println(root.get("total") + "권");
+			
+			JSONArray list = (JSONArray)root.get("items");
+			
+			System.out.println(list.size());
+			
+			for (Object obj : list) {
+				
+				JSONObject book = ((JSONObject)obj);
+				
+				System.out.println(book.get("title"));
+				System.out.println(book.get("discount"));
+				System.out.println(book.get("author"));
+				System.out.println();
+				
+			}
+			
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
         
         
     }
@@ -193,6 +191,6 @@ public class Ex01 {
         } catch (IOException e) {
             throw new RuntimeException("API 응답을 읽는 데 실패했습니다.", e);
         }
-
     }
+	
 }
