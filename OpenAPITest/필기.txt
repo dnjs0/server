@@ -81,8 +81,16 @@ const o1 = {
 
 
 
-1. 지도 api
-- 카카오 개발자 센터
+1. 지도 OPEN api
+- 카카오맵카카오 개발자 센터, 카카오 지도  api 두개
+    1)https://developers.kakao.com/console/app/1213573/config/appKey
+    2)https://apis.map.kakao.com/web/guide/
+    
+    
+    -com.test.java.map > Ex01.java
+    - map > ex01.jsp
+            ex02.jsp
+
 
 
 

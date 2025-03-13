@@ -1,4 +1,4 @@
-package com.test.java;
+package com.test.java.data;
 
 import java.io.IOException;
 import java.util.ArrayList;
