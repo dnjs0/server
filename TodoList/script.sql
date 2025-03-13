@@ -16,5 +16,6 @@ select * from tblTodo;
 insert into tblTodo values(seqTodo.nextVal,'컴퓨터 포멧하기',default, default);
 insert into tblTodo values(seqTodo.nextVal,'강아지 산책하기',default, default);
 insert into tblTodo values(seqTodo.nextVal,'고양이 목욕시키기',default, default);
+insert into tblTodo values(seqTodo.nextVal,'고양이',default, default);
 
 commit;

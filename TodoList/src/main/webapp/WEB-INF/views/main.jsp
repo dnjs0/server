@@ -23,8 +23,9 @@
 	<table id="tbl1">
 	   <c:forEach items="${list}" var="item">
 	   <tr>
-	       <td><input type="checkbox"></td>
+	       <td><input type="checkbox" data-seq = "${item.seq}"></td>
 	       <td>${item.todo} <span>${item.regdate}</span></td>
+	       <!-- ${item.seq} -->
 	   </tr>
 	   </c:forEach>
 	</table>
@@ -39,12 +40,50 @@
 	       </tr>
 	   </table>
 	</form>
-	
+	<form action="/todo/checkok.do" id="form2" method="post">
+	   <input type = "hidden" name="seq">
+	   <input type="hidden" name="state">
+	</form>
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script src="https://bit.ly/4cMuheh"></script>
 	<script>
-	
+	   /* 완료 체크 */
+	    $('#tbl1 input[type=checkbox]').change(()=>{
+	    	//alert(event.target.checked);
+	    	//alert(event.target.dataset['seq']);
+	    	
+	    	
+	    	//1. 바로 이동 get으로 이동
+	    	//location.href ='/todo/checkok.do?seq='+event.target.dataset['seq']+'&state'+(event.target.checked?'y':'n');
+	    	
+	    	//2. 히든태그 이용
+	    	//언제 ? post로 전송해야할때 쓴다.
+	    	//$('#form2 input[name=seq]').val(event.target.dataset['seq']);
+	    	//$('#form2 input[name=state]').val(event.target.checked?'y':'n');
+	    	
+	    	//$('#form2').submit();
+	    	
+	    });
+	   
+	   
 	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

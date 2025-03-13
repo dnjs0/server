@@ -75,6 +75,22 @@ public class TodoDAO {
         return null;
         
     }
+
+    //AddOK 서블릿이 할일(todo)을 줄텥니 insert 해주세요
+    public int add(String todo) {
+        try {
+            String sql = "insert into tblTodo(seq, todo, state, regdate) values(seqTodo.nextVal, ? ,default, default)";
+            
+            pstat = conn.prepareStatement(sql);
+            pstat.setString(1, todo);
+            
+            return pstat.executeUpdate();//성공하면 1 실패하면 0(실행하는 행이 1개이기때문)
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
     
 }
 
