@@ -15,24 +15,24 @@ import com.test.java.model.TodoDTO;
 @WebServlet("/main.do")
 public class Main extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //Main.java
-        
-        //1. DB 작업 > select
-        //2. 결과 > 전달 > 출력(JSP)
-        
-        //1.
-        TodoDAO dao = new TodoDAO();
-        
-        ArrayList<TodoDTO> list = dao.list();
-        
-        //2.
-        req.setAttribute("list", list);
+		//Main.java
+		
+		//1. DB 작업 > select
+		//2. 결과 > 전달 > 출력(JSP)
+		
+		//1.
+		TodoDAO dao = new TodoDAO();
+		
+		ArrayList<TodoDTO> list = dao.list();
+		
+		//2.
+		req.setAttribute("list", list);
 
-        req.getRequestDispatcher("/WEB-INF/views/main.jsp").forward(req, resp);
-    }
+		req.getRequestDispatcher("/WEB-INF/views/main.jsp").forward(req, resp);
+	}
 
 }
 
