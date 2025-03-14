@@ -97,6 +97,15 @@
             //해당 좌표의 주소지
             const geocoder = new kakao.maps.services.Geocoder();
             
+            geocoder.coord2Address(evt.latLng.getLng(), evt.latLng.getLat(), function(result, status){
+            	if(status = kakao.maps.services.Status.OK){
+            		//console.log(result);
+            		$('#address').val(result[0].road_address.address_name);
+            	}else{
+            		alert('해당 위치의 주소를 찾지 못했습니다.');
+            	}
+            });
+            
         });
         
     </script>
