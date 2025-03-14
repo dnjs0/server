@@ -8,17 +8,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/map/ex01.do")
+@WebServlet("/map/ex05.do")
 
-public class Ex01 extends HttpServlet {
+public class Ex05 extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //Ex01.java or Ex02.java
-        //String no = req.getParameter("no"); //ex01.do?no=02
-        String no = "03";
+        //Ex05.java
+        
 
-        req.getRequestDispatcher("/WEB-INF/views/map/ex"+no+".jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/views/map/ex05.jsp").forward(req, resp);
 
     }
 
