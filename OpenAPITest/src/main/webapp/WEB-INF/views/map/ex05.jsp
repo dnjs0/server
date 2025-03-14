@@ -23,7 +23,8 @@
     
     <form action="/api/map/add.do" method="post">
     <div>
-        <input type="submit" value="마커 추가하기">
+        <input type="submit" value="마커 추가하기"
+            >
     </div>
     <input type="hidden" name="lat">
     <input type="hidden" name="lng">

@@ -53,4 +53,39 @@ public class MapDAO {
         
         return null;
     }
+
+    public void add(MapDTO dto) {
+        try {
+            
+            String sql = "insert into tblMarker (seq, lat, lng) values (seqMarker.nextVal, ?,?)";
+            
+            pstat = conn.prepareStatement(sql);
+            
+            pstat.setString(1, dto.getLat());
+            pstat.setString(2, dto.getLng());
+            
+            pstat.executeUpdate();
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

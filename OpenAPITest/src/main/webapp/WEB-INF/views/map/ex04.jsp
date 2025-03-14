@@ -22,6 +22,10 @@
     </div>
     <hr>
     <div class="message">&nbsp</div>
+    <div>
+        <input type="submit" value="마커 추가하기"
+            onclick="location.href='/api/map/ex05.do';">
+    </div>
     
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://bit.ly/4cMuheh"></script>
